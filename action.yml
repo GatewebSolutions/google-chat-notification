@@ -1,0 +1,25 @@
+name: "Hello World"
+description: "Greet someone and record the time"
+inputs:
+  api-url:
+    description: "The URL of the API"
+    required: true
+    default: "https://chat.googleapis.com/v1/spaces/{{roomId}}/messages?key={{key}}&token={{token}}"
+  title:
+    description: "The title to use in the Card"
+    required: true
+    default: "Build complete"
+  subtitle:
+    description: "The subtitle to use in the Card"
+    required: true
+    default: "The build is complete"
+  contents:
+    description: "The contents of the Card (multiline)"
+    required: true
+  action-page:
+    description: "The action page button url"
+    required: true
+    default: ""
+runs:
+  using: "node20"
+  main: "dist/index.js"
